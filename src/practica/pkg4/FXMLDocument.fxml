@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="practica.pkg4.FXMLDocumentController">
+   <children>
+      <BorderPane layoutX="6.0" layoutY="5.0" prefHeight="390.0" prefWidth="588.0">
+         <top>
+            <VBox prefHeight="73.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+               <children>
+                  <MenuBar fx:id="menuBar">
+                     <menus>
+                        <Menu mnemonicParsing="false" text="_Archivo">
+                           <items>
+                              <MenuItem mnemonicParsing="false" onAction="#Salir" text="Salir">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="Q" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                 </accelerator>
+                              </MenuItem>
+                           </items>
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="A" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="_Lanzar">
+                           <items>
+                              <MenuItem fx:id="mAmazon" mnemonicParsing="false" onAction="#Amazon" text="Amazon">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="M" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                 </accelerator>
+                              </MenuItem>
+                              <MenuItem fx:id="mBlogger" mnemonicParsing="false" onAction="#Blogger" text="Blogger">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="B" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                 </accelerator>
+                              </MenuItem>
+                              <MenuItem fx:id="mEbay" mnemonicParsing="false" onAction="#Ebay" text="Ebay">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="E" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                 </accelerator>
+                              </MenuItem>
+                              <MenuItem fx:id="mFacebook" mnemonicParsing="false" onAction="#Facebook" text="Facebook">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="F" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                 </accelerator>
+                              </MenuItem>
+                              <MenuItem fx:id="mGoogle" mnemonicParsing="false" onAction="#Google" text="Google+">
+                                 <accelerator>
+                                    <KeyCodeCombination alt="UP" code="G" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                                 </accelerator>
+                              </MenuItem>
+                           </items>
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="L" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </Menu>
+                        <Menu fx:id="menuOpciones" mnemonicParsing="false" text="_Opciones">
+                           <items>
+                              <Menu fx:id="menuComprarEn" mnemonicParsing="false" text="Comprar en">
+                                 <items>
+                                    <RadioMenuItem fx:id="opcAmazon" mnemonicParsing="false" text="Amazon">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="opcs" />
+                                       </toggleGroup>
+                                    </RadioMenuItem>
+                                    <RadioMenuItem fx:id="opcEbay" mnemonicParsing="false" text="Ebay" toggleGroup="$opcs" />
+                                 </items>
+                              </Menu>
+                           </items>
+                           <accelerator>
+                              <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                           </accelerator>
+                        </Menu>
+                     </menus>
+                  </MenuBar>
+                  <ToolBar prefHeight="40.0" prefWidth="200.0">
+                     <items>
+                        <Button fx:id="Amazon" mnemonicParsing="false" onAction="#Amazon">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Imagenes/amazon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="Blogger" layoutX="10.0" layoutY="13.0" mnemonicParsing="false" onAction="#Blogger">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Imagenes/Blogger.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="Ebay" layoutX="74.0" layoutY="13.0" mnemonicParsing="false" onAction="#Ebay">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Imagenes/round-ebay.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="Facebook" layoutX="138.0" layoutY="13.0" mnemonicParsing="false" onAction="#Facebook">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Imagenes/facebook.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="Google" layoutX="202.0" layoutY="13.0" mnemonicParsing="false" onAction="#Google">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../Imagenes/google.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </items>
+                  </ToolBar>
+               </children>
+            </VBox>
+         </top>
+         <bottom>
+            <Label fx:id="estado" prefHeight="17.0" prefWidth="962.0" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
